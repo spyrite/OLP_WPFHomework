@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="Калькулятор" Height="400" Width="300">
-    <Grid>
+        Title="Калькулятор" Height="350" Width="250">
+    
+
+    <Grid Style="{StaticResource Window}">
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition />
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -20,23 +22,23 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        
-        <TextBox x:Name="textblock_Result" Grid.Row="0" Grid.ColumnSpan="4" TextAlignment="Right" VerticalAlignment="Center"/>
-        <Button x:Name="button_N0" Grid.Row="4" Grid.Column="1" Content="0"/>
-        <Button x:Name="button_N1" Grid.Row="3" Grid.Column="0" Content="1"/>
-        <Button x:Name="button_N2" Grid.Row="3" Grid.Column="1" Content="2"/>
-        <Button x:Name="button_N3" Grid.Row="3" Grid.Column="2" Content="3"/>
-        <Button x:Name="button_N4" Grid.Row="2" Grid.Column="0" Content="4"/>
-        <Button x:Name="button_N5" Grid.Row="2" Grid.Column="1" Content="5"/>
-        <Button x:Name="button_N6" Grid.Row="2" Grid.Column="2" Content="6"/>
-        <Button x:Name="button_N7" Grid.Row="1" Grid.Column="0" Content="7"/>
-        <Button x:Name="button_N8" Grid.Row="1" Grid.Column="1" Content="8"/>
-        <Button x:Name="button_N9" Grid.Row="1" Grid.Column="2" Content="9"/>
-        <Button x:Name="button_Clear" Grid.Row="4" Grid.Column="0" Content="C"/>
-        <Button x:Name="button_Result" Grid.Row="4" Grid.Column="2" Content="="/>
-        <Button x:Name="button_Add" Grid.Row="1" Grid.Column="3" Content="+"/>
-        <Button x:Name="button_Sub" Grid.Row="2" Grid.Column="3" Content="-"/>
-        <Button x:Name="button_Mul" Grid.Row="3" Grid.Column="3" Content="*"/>
-        <Button x:Name="button_Div" Grid.Row="4" Grid.Column="3" Content="/"/>
+
+        <TextBox x:Name="textblock_Result" Grid.Row="0" Grid.ColumnSpan="4" TextAlignment="Right" VerticalAlignment="Center" Style="{StaticResource Display}"/>
+        <Button x:Name="button_N0" Grid.Row="4" Grid.Column="1" Content="0" Style="{StaticResource NumButton}"/>
+        <Button x:Name="button_N1" Grid.Row="3" Grid.Column="0" Content="1" Style="{StaticResource NumButton}"/>
+        <Button x:Name="button_N2" Grid.Row="3" Grid.Column="1" Content="2" Style="{StaticResource NumButton}"/>
+        <Button x:Name="button_N3" Grid.Row="3" Grid.Column="2" Content="3" Style="{StaticResource NumButton}"/>
+        <Button x:Name="button_N4" Grid.Row="2" Grid.Column="0" Content="4" Style="{StaticResource NumButton}"/>
+        <Button x:Name="button_N5" Grid.Row="2" Grid.Column="1" Content="5" Style="{StaticResource NumButton}"/>
+        <Button x:Name="button_N6" Grid.Row="2" Grid.Column="2" Content="6" Style="{StaticResource NumButton}"/>
+        <Button x:Name="button_N7" Grid.Row="1" Grid.Column="0" Content="7" Style="{StaticResource NumButton}"/>
+        <Button x:Name="button_N8" Grid.Row="1" Grid.Column="1" Content="8" Style="{StaticResource NumButton}"/>
+        <Button x:Name="button_N9" Grid.Row="1" Grid.Column="2" Content="9" Style="{StaticResource NumButton}"/>
+        <Button x:Name="button_Clear" Grid.Row="4" Grid.Column="0" Content="C" Style="{StaticResource ClearButton}"/>
+        <Button x:Name="button_Result" Grid.Row="4" Grid.Column="2" Content="=" Style="{StaticResource OperationButton}"/>
+        <Button x:Name="button_Add" Grid.Row="1" Grid.Column="3" Content="+" Style="{StaticResource OperationButton}"/>
+        <Button x:Name="button_Sub" Grid.Row="2" Grid.Column="3" Content="-" Style="{StaticResource OperationButton}"/>
+        <Button x:Name="button_Mul" Grid.Row="3" Grid.Column="3" Content="*" Style="{StaticResource OperationButton}"/>
+        <Button x:Name="button_Div" Grid.Row="4" Grid.Column="3" Content="/" Style="{StaticResource OperationButton}"/>
     </Grid>
 </Window>
