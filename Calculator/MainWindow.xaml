@@ -21,7 +21,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         
-        <TextBlock x:Name="textblock_Result" Grid.Row="0" Grid.ColumnSpan="4" TextAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox x:Name="textblock_Result" Grid.Row="0" Grid.ColumnSpan="4" TextAlignment="Right" VerticalAlignment="Center"/>
         <Button x:Name="button_N0" Grid.Row="4" Grid.Column="1" Content="0"/>
         <Button x:Name="button_N1" Grid.Row="3" Grid.Column="0" Content="1"/>
         <Button x:Name="button_N2" Grid.Row="3" Grid.Column="1" Content="2"/>
