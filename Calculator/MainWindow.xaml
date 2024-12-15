@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="300">
+        Title="Калькулятор" Height="400" Width="300">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -21,7 +21,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         
-        <TextBlock x:Name="textblock_Result" Grid.Row="0" Grid.ColumnSpan="4"/>
+        <TextBlock x:Name="textblock_Result" Grid.Row="0" Grid.ColumnSpan="4" TextAlignment="Right" VerticalAlignment="Center"/>
         <Button x:Name="button_N0" Grid.Row="4" Grid.Column="1" Content="0"/>
         <Button x:Name="button_N1" Grid.Row="3" Grid.Column="0" Content="1"/>
         <Button x:Name="button_N2" Grid.Row="3" Grid.Column="1" Content="2"/>
@@ -36,7 +36,7 @@
         <Button x:Name="button_Result" Grid.Row="4" Grid.Column="2" Content="="/>
         <Button x:Name="button_Add" Grid.Row="1" Grid.Column="3" Content="+"/>
         <Button x:Name="button_Sub" Grid.Row="2" Grid.Column="3" Content="-"/>
-        <Button x:Name="button_Mul" Grid.Row="3" Grid.Column="3" Content="x"/>
+        <Button x:Name="button_Mul" Grid.Row="3" Grid.Column="3" Content="*"/>
         <Button x:Name="button_Div" Grid.Row="4" Grid.Column="3" Content="/"/>
     </Grid>
 </Window>
