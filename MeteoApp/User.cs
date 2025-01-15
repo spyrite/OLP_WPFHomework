@@ -8,13 +8,15 @@ namespace MeteoApp
 {
     public class User
     {
-        public string login { get; set; }
-        public string password { get; set; }
+        public string Login { get; set; }
+        public string Password { get; set; }
+        public bool IsSignIn {  get; set; }
 
         public User(string login, string password)
         {
-            this.login = login;
-            this.password = password;
+            Login = login;
+            Password = password;
+            IsSignIn = false;
         }
     }
 }

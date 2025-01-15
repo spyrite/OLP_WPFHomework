@@ -19,28 +19,33 @@ namespace MeteoApp
     /// </summary>
     public partial class RegistrationWindow : Window
     {
+        private UserStorage userStorage { get; } = new UserStorage();
+
         public RegistrationWindow()
         {
             InitializeComponent();
-            register_Button.Click += Register_Button_Click;
+            Registration_Button.Click += Register_Button_Click;
+            
         }
 
         private void Register_Button_Click(object sender, RoutedEventArgs e)
         {
-            var login = login_TextBox.Text;
-            var password = password_TextBox.Text;
-            var confirmPassword = confirmPassword_TextBox.Text;
+            var inputLogin = RegLogin_TextBox.Text;
+            var inputPassword = RegPassword_TextBox.Text;
+            var confirmPassword = RegConfirm_TextBox.Text;
 
-            if (password != confirmPassword)
+            if (inputPassword != confirmPassword)
             {
-                MessageBox.Show("Пароли не совпадают!");
+                MessageBox.Show("Пароли не совпадают! Проверьте данные ввода.");
                 return;
             }
 
-            var user = new User(login, password);
-            UsersStorage.Add(user);
+            var registeredUser = new User(inputLogin, inputPassword);
+            registeredUser.IsSignIn = true;
 
-            MessageBox.Show("Вы успешно зарегистрировались :)");
+            userStorage.Add(registeredUser);
+
+            MessageBox.Show("Аккаунт успешно зарегистрирован!");
             Close();
         }
     }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MeteoApp"
         mc:Ignorable="d"
-        Title="RegistrationWindow" Height="300" Width="300">
+        Title="RegistrationWindow" Height="300" Width="330">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -15,66 +15,70 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-
-            <Label Grid.Column="0"
-                   Content="Логин"
-                   HorizontalContentAlignment="Center" 
-                   VerticalContentAlignment="Center"/>
-            <TextBox x:Name="login_TextBox"
-                       Grid.Column="1"
-                       HorizontalAlignment="Stretch"
-                       VerticalAlignment="Stretch"
-                       Margin="5,5,5,5"/>
-        </Grid>
-
-        <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-
-            <Label Grid.Column="0"
-                   Content="Пароль"
-                   HorizontalContentAlignment="Center" 
-                   VerticalContentAlignment="Center"/>
-            <TextBox x:Name="password_TextBox"
-                       Grid.Column="1"
-                       HorizontalAlignment="Stretch"
-                       VerticalAlignment="Stretch"
-                       Margin="5,5,5,5"/> 
-        </Grid>
-
-        <Grid Grid.Row="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-
-            <Label Grid.Column="0"
-                   Content="Повторить пароль"
-                   HorizontalContentAlignment="Center" 
-                   VerticalContentAlignment="Center"/>
-            <TextBox x:Name="confirmPassword_TextBox"
-                       Grid.Column="1"
-                       HorizontalAlignment="Stretch"
-                       VerticalAlignment="Stretch"
-                       Margin="5,5,5,5"/>
-        </Grid>
-
         <Label Grid.Row="0" 
                Content="Регистрация" 
                HorizontalContentAlignment="Center" 
                VerticalContentAlignment="Center"
                FontSize="20"/>
 
-        <Button x:Name="register_Button"
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0"
+                   Content="Логин"
+                   HorizontalContentAlignment="Left" 
+                   VerticalContentAlignment="Center"
+                   Margin="5,5,5,5"/>
+            <TextBox x:Name="RegLogin_TextBox"
+                       Grid.Column="1"
+                       HorizontalAlignment="Right"
+                       Width="200"
+                       Margin="5,5,5,5"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0"
+                   Content="Пароль"
+                   HorizontalContentAlignment="Left" 
+                   VerticalContentAlignment="Center"
+                   Margin="5,5,5,5"/>
+            <TextBox x:Name="RegPassword_TextBox"
+                       Grid.Column="1"
+                       HorizontalAlignment="Right"
+                       Width="200"
+                       Margin="5,5,5,5"/> 
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0"
+                   Content="Подтвердить"
+                   HorizontalContentAlignment="Center" 
+                   VerticalContentAlignment="Center"
+                   Margin="5,5,5,5"/>
+            <TextBox x:Name="RegConfirm_TextBox"
+                       Grid.Column="1"
+                       HorizontalAlignment="Right"
+                       Width="200"
+                       Margin="5,5,5,5"/>
+        </Grid>
+
+        <Button x:Name="Registration_Button"
                 Grid.Row="4"
-                Content="Зарегистрироваться"/>
+                Content="Зарегистрироваться"
+                Margin="10"/>
 
     </Grid>
 </Window>
